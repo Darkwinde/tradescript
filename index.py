@@ -9,7 +9,7 @@ import cgitb
 import http.client
 http.client.HTTPConnection._http_vsn = 10
 http.client.HTTPConnection._http_vsn_str = 'HTTP/1.0'
-cgitb.enable(display=0, logdir="/var/www/expugnator")
+cgitb.enable(display=0, logdir="/var/www/expugnator/log/")
 
 
 config_datei = open('trade.config','r')
@@ -49,10 +49,10 @@ for start in range(len(data)):
         if start != ziel:
             if data[start]['item_id'] == data[ziel]['item_id']:
 
-                if(data[start]['sell_price_min'] < (data[ziel]['sell_price_min']-1)*0.8):
+                if(data[start]['sell_price_min'] < (data[ziel]['sell_price_min']-1)*0.8 and data[start]['sell_price_min'] != 0):
                     spek += [[data[start],data[ziel],((data[ziel]['sell_price_min']-1)*0.9)/data[start]['sell_price_min']]]
                 
-                if(data[start]['sell_price_min'] < (data[ziel]['buy_price_max'])*0.8):
+                if(data[start]['sell_price_min'] < (data[ziel]['buy_price_max'])*0.8 and data[start]['sell_price_min'] != 0):
                     direkt += [[data[start],data[ziel],(data[ziel]['buy_price_max']*0.9)/data[start]['sell_price_min']]]
                 
 def help(ls):
