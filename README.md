@@ -1,5 +1,5 @@
 # tradescript
-Tradescript Test
+Tradescript Test in Phyton 3.7
 
   - git pull
   - chmod 755 index.py
