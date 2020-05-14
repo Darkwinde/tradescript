@@ -1,5 +1,5 @@
 # tradescript
-Tradescript Albion Online
+Tradescript Test
 
   - git pull
   - chmod 755 index.py
