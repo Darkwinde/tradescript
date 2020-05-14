@@ -9,7 +9,7 @@ import cgitb
 import http.client
 http.client.HTTPConnection._http_vsn = 10
 http.client.HTTPConnection._http_vsn_str = 'HTTP/1.0'
-cgitb.enable()
+cgitb.enable(display=0, logdir="/var/www/expugnator")
 
 
 config_datei = open('trade.config','r')
