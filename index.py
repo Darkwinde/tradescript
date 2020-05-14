@@ -42,17 +42,22 @@ if data == []:
 spek = []
 direkt = []
 
-
+counter = 0
+for d in data:
+    if data[counter]['sell_price_min'] == 0:
+        del(data[counter])
+    else:
+        counter += 1
 
 for start in range(len(data)):
     for ziel in range(len(data)):
         if start != ziel:
             if data[start]['item_id'] == data[ziel]['item_id']:
 
-                if(data[start]['sell_price_min'] < (data[ziel]['sell_price_min']-1)*0.8 and data[start]['sell_price_min'] != 0):
+                if(data[start]['sell_price_min'] < (data[ziel]['sell_price_min']-1)*0.8):
                     spek += [[data[start],data[ziel],((data[ziel]['sell_price_min']-1)*0.9)/data[start]['sell_price_min']]]
                 
-                if(data[start]['sell_price_min'] < (data[ziel]['buy_price_max'])*0.8 and data[start]['sell_price_min'] != 0):
+                if(data[start]['sell_price_min'] < (data[ziel]['buy_price_max'])*0.8):
                     direkt += [[data[start],data[ziel],(data[ziel]['buy_price_max']*0.9)/data[start]['sell_price_min']]]
                 
 def help(ls):
