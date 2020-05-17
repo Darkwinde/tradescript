@@ -97,9 +97,10 @@ for item in direct:
     ergdirekt += [[item[0]['item_id'], item[0]['city'], item[1]['city'], int((item[2] - 1) * 100), time,
                    item[0]['sell_price_min'], item[1]['buy_price_max']]]
 
-time = datetime.utcnow() - timedelta(minutes=int(config['min']))
+time = datetime.utcnow() - timedelta(minutes=int(config['delta_t']))
+# todo: Strftimes setzen https://www.programiz.com/python-programming/datetime/strftime
 timestamp = str(time.year) + "-" + ("00" + str(time.month))[-2:] + "-" + ("00" + str(time.day))[-2:] + "T" + str(
-    time.hour) + ":" + str(time.minute) + ":" + str(time.second)
+        time.hour) + ":" + str(time.minute) + ":" + str(time.second)
 
 html = ""
 print("Content-type:text/html\r\n\r\n")
