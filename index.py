@@ -1,9 +1,5 @@
-#!/usr/bin/python3.7
 import urllib.request
 import json
-import threading
-import time
-import sys
 from datetime import datetime, timedelta
 import cgitb
 import http.client
