@@ -7,9 +7,10 @@ import sys
 from datetime import datetime, timedelta
 import cgitb
 import http.client
+
 http.client.HTTPConnection._http_vsn = 10
 http.client.HTTPConnection._http_vsn_str = 'HTTP/1.0'
-
+cgitb.enable(display=0, logdir="/var/www/expugnator/log/")
 
 craft_datei = open('craft.json','r')
 craft = json.loads(craft_datei.read())
