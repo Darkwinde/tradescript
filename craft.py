@@ -25,7 +25,7 @@ Nodestr = "Thetford"
 
 #url = "https://www.albion-online-data.com/api/v2/stats/prices/"+Itemstr+"?locations="+Nodestr+"&qualities=1"
 
-Itemstr = "";
+Itemstr = ""
 
 for gear in craft[0]:
     for t in tier:
