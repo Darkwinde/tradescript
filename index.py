@@ -1,3 +1,4 @@
+#!/usr/bin/python3.7
 import urllib.request
 import json
 import threading  # für später
