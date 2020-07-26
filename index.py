@@ -125,7 +125,7 @@ for item in direkt_spek:
                 item[5]) + "</td><td>" + str(item[2]) + "</td><td>" + str(item[6]) + "</td><td>" + str(
                 item[3]) + "%</td><td>" + str(item[4]) + "</td></tr>"
 
-
+html += "</table></body></html>"
 
 """
 datei = open('trade.html','w')
