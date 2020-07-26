@@ -108,7 +108,7 @@ for item in spekdirekt:
     if item[4] > timestamp:
         html += "<tr><td>"+str(item[0])+"+</td><td>"+str(item[1])+"</td><td>"+str(item[5])+"</td><td>"+str(item[2])+"</td><td>"+str(item[6])+"</td><td>"+str(item[3])+"%</td><td>"+str(item[4])+"</td></tr>"
 
-html += "</table></body></html>"
+
 
 """
 datei = open('trade.html','w')

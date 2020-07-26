@@ -1,0 +1,137 @@
+[
+{
+    "ARMOR_CLOTH_SET1": 
+    {
+        "Mat": 
+        [
+            {
+                "Res": "CLOTH",
+                "Anz": "16"
+            }
+        ]
+    },
+    "ARMOR_CLOTH_SET2": 
+    {
+        "Mat": 
+        [
+            {
+                "Res": "CLOTH",
+                "Anz": "16"
+            }
+        ]
+    },
+    "ARMOR_CLOTH_SET3": 
+    {
+        "Mat": 
+        [
+            {
+                "Res": "CLOTH",
+                "Anz": "16"
+            }
+        ]
+    },
+    "ARMOR_CLOTH_ROYAL": 
+    {
+        "Mat": 
+        [
+            {
+                "Res": "CLOTH",
+                "Anz": "16"
+            },
+            {
+                "Res": "QUESTITEM_TOKEN_ROYAL",
+                "Anz": 1
+            }
+        ]
+    },
+    "ARMOR_LEATHER_SET1": 
+    {
+        "Mat": 
+        [
+            {
+                "Res": "LEATHER",
+                "Anz": "16"
+            }
+        ]
+    },
+    "ARMOR_LEATHER_SET2": 
+    {
+        "Mat": 
+        [
+            {
+                "Res": "LEATHER",
+                "Anz": "16"
+            }
+        ]
+    },
+    "ARMOR_LEATHER_SET3": 
+    {
+        "Mat": 
+        [
+            {
+                "Res": "LEATHER",
+                "Anz": "16"
+            }
+        ]
+    },
+    "ARMOR_LEATHER_ROYAL": 
+    {
+        "Mat": 
+        [
+            {
+                "Res": "LEATHER",
+                "Anz": "16"
+            },
+            {
+                "Res": "QUESTITEM_TOKEN_ROYAL",
+                "Anz": 1
+            }
+        ]
+    },
+    "ARMOR_PLATE_SET1": 
+    {
+        "Mat": 
+        [
+            {
+                "Res": "METALBAR",
+                "Anz": "16"
+            }
+        ]
+    },
+    "ARMOR_PLATE_SET2": 
+    {
+        "Mat": 
+        [
+            {
+                "Res": "METALBAR",
+                "Anz": "16"
+            }
+        ]
+    },
+    "ARMOR_PLATE_SET3": 
+    {
+        "Mat": 
+        [
+            {
+                "Res": "METALBAR",
+                "Anz": "16"
+            }
+        ]
+    },
+    "ARMOR_PLATE_ROYAL": 
+    {
+        "Mat": 
+        [
+            {
+                "Res": "METALBAR",
+                "Anz": "16"
+            },
+            {
+                "Res": "QUESTITEM_TOKEN_ROYAL",
+                "Anz": 1
+            }
+        ]
+        
+    }
+}
+]
