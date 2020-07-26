@@ -157,10 +157,10 @@ for i in prod:
     print(i[4])
     print(i[5])
     print("")
-"""    
+  
 local_datei = open('localisation.json','r')
 local = json.loads(local_datei.read())
-"""
+
 for i in local:
     for j in prod:
         if i["UniqueName"] == j[0]:
