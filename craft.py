@@ -153,28 +153,14 @@ for i in data:
 3: Sell Price min
 4: timestamp
 5: valid
-
-for i in prod:
-    print(i[0])
-    print(i[3])
-    print(i[1]+i[2])
-    print(int(i[1]*(1-0.13)+i[2]))
-    print(int(i[1]*(1-0.371)+i[2]))
-    print(int(i[1]*(1-0.425)+i[2]))
-    print(i[4])
-    print(i[5])
-    print("")
-  
-local_datei = open('localisation.json','r')
+"""
+local_datei = open('localisation.json',mode='r', encoding='utf-8')
 local = json.loads(local_datei.read())
 
-for i in local:
-    for j in prod:
-        if i["UniqueName"] == j[0]:
-            print(i["LocalizedNames"]["DE-DE"], j[0])
+
     
 #https://wiki.albiononline.com/wiki/Journal
-"""
+
 
 
 html = ""
@@ -185,7 +171,12 @@ html += "<head><title>Craft Program</title></head><table>"
 for i in prod:
     if i[5] == 1:
         html += "<tr>"
-        html += "<td>" + str(i[0]) + "</td>"
+        html += "<td>" + i[0][:2] + "</td>"
+        for j in local:
+            if j["UniqueName"] == i[0]:
+                html += "<td>" + j["LocalizedNames"]["DE-DE"] + "</td>"
+
+
         html += "<td>" + str(i[1] + i[2]) + "</td>"
         html += "<td>" + str(i[3]) + "</td>"
         html += "<td>" + str(i[4]) + "</td>"
