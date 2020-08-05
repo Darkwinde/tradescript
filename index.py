@@ -42,7 +42,7 @@ response = urllib.request.urlopen(url)
 data = json.loads(response.read())
 
 if not data:
-    exit
+    exit()
 
 spek = []  # Todo: Change Name
 direct = []  # Todo: Change Name
@@ -50,9 +50,11 @@ direct = []  # Todo: Change Name
 counter = 0
 for d in data:
     if data[counter]['sell_price_min'] == 0:
-        del (data[counter])
+        del(data[counter])
     else:
         counter += 1
+
+print(data)
 
 for start in range(len(data)):
     for destination in range(len(data)):
@@ -60,8 +62,8 @@ for start in range(len(data)):
             if data[start]['item_id'] == data[destination]['item_id']:
 
                 if data[start]['sell_price_min'] < (data[destination]['sell_price_min'] - 1) * 0.8:
-                    spek += [{data[start], data[destination],
-                              ((data[destination]['sell_price_min'] - 1) * 0.9) / data[start]['sell_price_min']}
+                    spek += [[data[start], data[destination],
+                              ((data[destination]['sell_price_min'] - 1) * 0.9) / data[start]['sell_price_min']]
                              ]
 
                 if data[start]['sell_price_min'] < (data[destination]['buy_price_max']) * 0.8:

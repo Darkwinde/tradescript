@@ -147,6 +147,13 @@ for i in data:
 
 #print(prod)
 """
+0: Item
+1: Material Kosten
+2: artefakt Kosten
+3: Sell Price min
+4: timestamp
+5: valid
+
 for i in prod:
     print(i[0])
     print(i[3])
@@ -173,10 +180,16 @@ for i in local:
 html = ""
 print("Content-type:text/html\r\n\r\n")
 html += "<html>"
-html += "<head><title>Hello - Second CGI Program</title></head>"
+html += "<head><title>Craft Program</title></head><table>"
 
 for i in prod:
-    html += "<a>" + i[0] + "</a>"
+    if i[5] == 1:
+        html += "<tr>"
+        html += "<td>" + str(i[0]) + "</td>"
+        html += "<td>" + str(i[1] + i[2]) + "</td>"
+        html += "<td>" + str(i[3]) + "</td>"
+        html += "<td>" + str(i[4]) + "</td>"
+        html += "</tr>"
 
 html += "</body></html>"
 
